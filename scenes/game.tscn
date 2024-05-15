@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://oapl4mj03j7v"]
+[gd_scene load_steps=22 format=3 uid="uid://oapl4mj03j7v"]
 
 [ext_resource type="PackedScene" uid="uid://dqul5d02ai10" path="res://scenes/player.tscn" id="1_gedt0"]
 [ext_resource type="Texture2D" uid="uid://dmqxs7qetymh6" path="res://assets/sprites/midground/spring_.png" id="1_llghe"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cfrnslh32cjs7" path="res://assets/sprites/midground/blackout_.png" id="6_7tq3e"]
 [ext_resource type="Texture2D" uid="uid://crugjxvxsuyy8" path="res://assets/sprites/foreground/foreground_.png" id="7_ybiq6"]
 [ext_resource type="PackedScene" uid="uid://hi1wf1ttvyy0" path="res://scenes/platform.tscn" id="9_4irpi"]
+[ext_resource type="PackedScene" uid="uid://cccphlrl7w8go" path="res://scenes/coin.tscn" id="10_iryn6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x35qm"]
 texture = ExtResource("1_llghe")
@@ -1843,6 +1844,21 @@ sources/4 = SubResource("TileSetAtlasSource_n0hex")
 sources/5 = SubResource("TileSetAtlasSource_j5vnt")
 sources/6 = SubResource("TileSetAtlasSource_lw627")
 
+[sub_resource type="Animation" id="Animation_amgn7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-64, -88)]
+}
+
 [sub_resource type="Animation" id="Animation_s4os5"]
 resource_name = "move"
 length = 4.0
@@ -1858,21 +1874,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-64, -88), Vector2(96, -88)]
-}
-
-[sub_resource type="Animation" id="Animation_amgn7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-64, -88)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_shyp6"]
@@ -1907,3 +1908,30 @@ libraries = {
 "": SubResource("AnimationLibrary_shyp6")
 }
 autoplay = "move"
+
+[node name="Coin" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(104, -40)
+
+[node name="Coin7" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(-136, -120)
+
+[node name="Coin8" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(-152, 16)
+
+[node name="Coin9" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(56, -96)
+
+[node name="Coin2" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(216, -48)
+
+[node name="Coin3" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(424, -48)
+
+[node name="Coin5" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(200, -176)
+
+[node name="Coin6" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(216, -240)
+
+[node name="Coin4" parent="." instance=ExtResource("10_iryn6")]
+position = Vector2(168, 56)
