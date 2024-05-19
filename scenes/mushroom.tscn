@@ -54,17 +54,17 @@ autoplay = "idle"
 frame_progress = 0.692099
 
 [node name="Killzone" parent="." instance=ExtResource("2_wp4ut")]
+position = Vector2(0, -7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_70g5e")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
 rotation = 1.5708
-target_position = Vector2(0, 11)
+target_position = Vector2(4.76837e-07, 7)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
 rotation = 4.71239
-target_position = Vector2(0, 11)
+target_position = Vector2(0, 7)
